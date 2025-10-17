@@ -22,6 +22,7 @@ import com.uis.AdminSmartCampusUIS.backend_AdminSmartCampusUIS.dto.DeviceApplica
 import com.iot.admin.admin.service.ApplicationService;
 
 //pruba modulo aplicacion
+// cambio lo hizo jp
 @RestController
 @RequestMapping("apps")
 public class ApplicationController {
