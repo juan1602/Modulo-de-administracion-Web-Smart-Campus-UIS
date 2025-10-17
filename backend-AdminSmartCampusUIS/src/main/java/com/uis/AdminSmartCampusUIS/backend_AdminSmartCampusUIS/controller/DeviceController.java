@@ -2,7 +2,7 @@ package com.uis.AdminSmartCampusUIS.backend_AdminSmartCampusUIS.controller;
 
 import java.util.List;
 import java.util.Map;
-
+//prueba con device controller
 import javax.validation.Valid;
 
 import com.iot.admin.admin.dto.DeviceDetails;
@@ -35,66 +35,66 @@ public class DeviceController {
     private DeviceService service;
 
     @GetMapping
-    public List<DeviceDetails> list(){       
+    public List<DeviceDetails> list() {
         return service.findAll();
     }
 
     @GetMapping("pageable")
-    public Map<String,Object> page_list(@RequestParam Map<String,String> params){
+    public Map<String, Object> page_list(@RequestParam Map<String, String> params) {
         Page<DeviceDetails> data = service.paginate(params);
-        Map<String,Object> result= Pagination.mapPage(data);
+        Map<String, Object> result = Pagination.mapPage(data);
         return result;
     }
 
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-    public DeviceDetails create(@RequestBody @Valid DeviceForm data){        
+    public DeviceDetails create(@RequestBody @Valid DeviceForm data) {
         return service.create(data);
     }
 
     @GetMapping("/{id}")
-    public DeviceDetails findById(@PathVariable Long id){
+    public DeviceDetails findById(@PathVariable Long id) {
         return service.findById(id);
     }
 
     @GetMapping("/gateway/{id}")
-    public DeviceDetails getGatewayRepresentation(@PathVariable Long id){
+    public DeviceDetails getGatewayRepresentation(@PathVariable Long id) {
         return service.findById(id);
     }
 
     @PutMapping("/{id}")
-    public DeviceDetails update(@RequestBody @Valid DeviceForm formData, @PathVariable Long id){
+    public DeviceDetails update(@RequestBody @Valid DeviceForm formData, @PathVariable Long id) {
         return service.update(formData, id);
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
-    public boolean delete(@PathVariable Long id){        
+    public boolean delete(@PathVariable Long id) {
         return service.delete(id);
     }
 
     @PostMapping("/resource/{device_id}")
     @ResponseStatus(code = HttpStatus.CREATED)
-    public boolean createResource(@RequestBody @Valid DeviceResourcePropertyForm data,@PathVariable Long device_id){        
-        return service.addResource(data,device_id);
+    public boolean createResource(@RequestBody @Valid DeviceResourcePropertyForm data, @PathVariable Long device_id) {
+        return service.addResource(data, device_id);
     }
 
     @DeleteMapping("/resource/{device_id}")
     @ResponseStatus(code = HttpStatus.CREATED)
-    public boolean deleteResource(@RequestBody @Valid DeviceResourcePropertyForm data,@PathVariable Long device_id){        
-        return service.deleteResource(data,device_id);
+    public boolean deleteResource(@RequestBody @Valid DeviceResourcePropertyForm data, @PathVariable Long device_id) {
+        return service.deleteResource(data, device_id);
     }
 
     @PostMapping("/property/{device_id}")
     @ResponseStatus(code = HttpStatus.CREATED)
-    public PropertyDetails createProperty(@RequestBody @Valid PropertyForm data,@PathVariable Long device_id){        
-        return service.addProperty(data,device_id);
+    public PropertyDetails createProperty(@RequestBody @Valid PropertyForm data, @PathVariable Long device_id) {
+        return service.addProperty(data, device_id);
     }
 
     @DeleteMapping("/property/{device_id}")
     @ResponseStatus(code = HttpStatus.CREATED)
-    public boolean deletePorperty(@RequestBody @Valid DeviceResourcePropertyForm data,@PathVariable Long device_id){        
-        return service.deleteProperty(data,device_id);
+    public boolean deletePorperty(@RequestBody @Valid DeviceResourcePropertyForm data, @PathVariable Long device_id) {
+        return service.deleteProperty(data, device_id);
     }
-    
+
 }
