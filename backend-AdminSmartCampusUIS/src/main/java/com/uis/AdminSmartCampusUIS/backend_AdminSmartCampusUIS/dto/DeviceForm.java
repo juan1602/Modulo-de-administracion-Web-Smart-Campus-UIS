@@ -1,10 +1,9 @@
-package com.iot.admin.admin.dto;
+package com.uis.AdminSmartCampusUIS.backend_AdminSmartCampusUIS.dto;
 
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
+
 
 import com.fasterxml.jackson.annotation.JsonAlias;
-import com.iot.admin.admin.entity.Device;
+import com.uis.AdminSmartCampusUIS.backend_AdminSmartCampusUIS.entity.Device;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,8 +12,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DeviceForm {
 
-    @NotNull(message = "Name can't be null.")
-    @NotEmpty(message = "Name can't be empty.")
+    //@NotNull(message = "Name can't be null.")
+    //@NotEmpty(message = "Name can't be empty.")
     private String name;
 
     private String description;

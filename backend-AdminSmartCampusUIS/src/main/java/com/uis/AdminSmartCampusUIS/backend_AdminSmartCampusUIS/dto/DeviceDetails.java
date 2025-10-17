@@ -1,9 +1,9 @@
-package com.iot.admin.admin.dto;
+package com.uis.AdminSmartCampusUIS.backend_AdminSmartCampusUIS.dto;
 
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.iot.admin.admin.entity.Device;
+import com.uis.AdminSmartCampusUIS.backend_AdminSmartCampusUIS.entity.Device;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

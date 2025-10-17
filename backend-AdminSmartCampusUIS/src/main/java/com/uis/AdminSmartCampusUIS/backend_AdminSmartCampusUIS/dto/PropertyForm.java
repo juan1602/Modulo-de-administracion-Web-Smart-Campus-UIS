@@ -1,7 +1,7 @@
 package com.uis.AdminSmartCampusUIS.backend_AdminSmartCampusUIS.dto;
 
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
+//import jakarta.validation.constraints.NotEmpty;
+//import jakarta.validation.constraints.NotNull;
 
 import com.uis.AdminSmartCampusUIS.backend_AdminSmartCampusUIS.entity.Property;
 
@@ -12,12 +12,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PropertyForm {
 
-    @NotNull(message = "Name doesn't be null.")
-    @NotEmpty(message = "Name not empty.")
+    //@NotNull(message = "Name doesn't be null.")
+    //@NotEmpty(message = "Name not empty.")
     private String name;
 
-    @NotNull(message = "Name doesn't be null.")
-    @NotEmpty(message = "Name not empty.")
+    //@NotNull(message = "Name doesn't be null.")
+    //@NotEmpty(message = "Name not empty.")
     private String value;
 
     public Property getEntity(){

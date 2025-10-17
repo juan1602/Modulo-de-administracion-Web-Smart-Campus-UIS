@@ -1,4 +1,4 @@
-package com.iot.admin.admin.dto;
+package com.uis.AdminSmartCampusUIS.backend_AdminSmartCampusUIS.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

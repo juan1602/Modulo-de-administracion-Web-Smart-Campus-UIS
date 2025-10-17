@@ -1,7 +1,7 @@
 package com.uis.AdminSmartCampusUIS.backend_AdminSmartCampusUIS.dto;
 
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
+//import jakarta.validation.constraints.NotEmpty;
+//import jakarta.validation.constraints.NotNull;
 
 import com.uis.AdminSmartCampusUIS.backend_AdminSmartCampusUIS.entity.ServiceModel;
 
@@ -12,8 +12,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ServiceForm {
 
-    @NotNull(message = "Name can't be null.")
-    @NotEmpty(message = "Name can't be empty.")
+    //@NotNull(message = "Name can't be null.")
+    //@NotEmpty(message = "Name can't be empty.")
     private String name;
 
     public ServiceModel getEntity(){
